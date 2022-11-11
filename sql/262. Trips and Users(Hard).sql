@@ -53,7 +53,7 @@ SELECT cte1.request_at                    AS Day,
        Round(COALESCE(cnt2 / cnt1, 0), 2) AS 'Cancellation Rate'
 FROM   cte1
        LEFT JOIN cte2
-              ON cte1.request_at = cte2.request_at 
+              ON cte1.request_at = cte2.request_at;
 
 
 -- 3. Using Subqueries (Slowest - Not Recommended)
