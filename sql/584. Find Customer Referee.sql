@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/find-customer-referee/?envType=study-plan&id=sql-i
+# https://leetcode.com/problems/find-customer-referee/?envType=study-plan&id=sql-i
 
 SELECT name
 FROM customer
