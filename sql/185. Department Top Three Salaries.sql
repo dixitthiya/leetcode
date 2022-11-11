@@ -1,4 +1,4 @@
--- https://leetcode.com/problems/department-top-three-salaries/submissions/
+-- https://leetcode.com/problems/department-top-three-salaries/
 
 WITH cte AS
   (SELECT id,
