@@ -6,12 +6,12 @@
 1. Find names of city that starts vowels - a,e,i,o,u
 ```
 SELECT *
-FROM contries
+FROM countries
 WHERE city regexp '^[aeiou]'
 ```
 2. Find names of city that does not start with vowels - a,e,i,o,u
 ```
 SELECT *
-FROM contries
+FROM countries
 WHERE city regexp '^[^aeiou]'
 ```
