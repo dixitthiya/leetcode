@@ -51,6 +51,7 @@ WHERE  salary NOT IN(SELECT Max(salary)
 
 -- 2. Using Subquery
 
-SELECT (SELECT salary
+SELECT (SELECT DISTINCT salary
         FROM   employee
-        WHERE  salary > 500) AS SecondHighestSalary; 
+        ORDER  BY salary DESC
+        LIMIT  1, 1 ) AS SecondHighestSalary; 
