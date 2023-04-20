@@ -53,5 +53,5 @@ WHERE  salary NOT IN(SELECT Max(salary)
 
 SELECT (SELECT DISTINCT salary
         FROM   employee
-        ORDER  BY salary DESC
-        LIMIT  1, 1 ) AS SecondHighestSalary; 
+        ORDER  BY salary DESC                 -- If you don't use subquery and there is no second highest value then the result will be blank, if you
+        LIMIT  1, 1 ) AS SecondHighestSalary; -- want null in return then put it in the subquery.
