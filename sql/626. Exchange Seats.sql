@@ -38,7 +38,7 @@
 -- Explanation: 
 -- Note that if the number of students is odd, there is no need to change the last one's seat.
 
-
+-- 1. Brute Force
 SELECT CASE
          WHEN Mod(id, 2) = 0 THEN id - 1
          WHEN Mod(id, 2) = 1
@@ -49,3 +49,10 @@ SELECT CASE
        student
 FROM   seat
 ORDER  BY id 
+
+-- 2. Fastest
+SELECT Row_number()
+         over(
+           ORDER BY IF(id % 2 = 0, id - 1, id + 1) ) AS id,
+       student
+FROM   seat 
